@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" href="../images/fav_ico_notes.ico" type="image/x-icon">
+    <!--
+      Source: https://getbootstrap.com/docs/4.3/content/tables/
+      Utilisation: Tableau Bootstrap et autres elements
+    -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>HTML</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-light bg-light justify-content-start">
+        <a href="index.html" class="btn btn-outline-dark">Accueil</a>
+        <a href="html.html" class="btn btn-outline-dark">HTML</a>
+        <a href="construction.html" class="btn btn-outline-dark">CSS</a>
+        <a href="construction.html" class="btn btn-outline-dark">Javascript</a>
+        <a href="construction.html" class="btn btn-outline-dark">API</a>
+    </nav>
+
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">&lt;tag&gt;</th>
+          <th scope="col">Description</th>
+          <th scope="col">Exemple</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">&lt;b&gt;</th>
+          <td>Transforme le texte en caractères gras.</td>
+          <td>Exemple: <b>texte gras</b> </td>
+        </tr>
+        <tr>
+          <th scope="row">&lt;p&gt;</th>
+          <td>Organise le texte en paragraphe</td>
+          <td>Exemple: <p>Ce texte est dans un paragraphe</p> </td>
+        </tr>
+        <tr>
+          <th scope="row">&lt;h[1-6]&gt;</th>
+          <td>Utiliser pour signifier que le texte dans cette balise est un titre.</td>
+          <td>
+              Exemple:<br/> 
+              <h1>Ce texte est un titre h1</h1><br/>
+              <h2>Ce texte est un titre h2</h2><br/>
+              <h3>Ce texte est un titre h3</h3><br/>
+              <h4>Ce texte est un titre h4</h4><br/>
+              <h5>Ce texte est un titre h5</h5><br/>
+              <h6>Ce texte est un titre h6</h6><br/>
+              <p>Les titres h[1-6] ont des valeurs css par default qu'on peut voir ici:</p>
+              <a href="https://www.w3schools.com/tags/tag_hn.asp">h1[1-6] w3school</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">&lt;img src="unchemin.jpg"&gt</th>
+          <td>Permet d'inserer une image.</td>
+          <td>
+              Exemple: <img src="fav_ico_notes.ico"/> <br/><br/>
+              On peut aussi ajouter un attribut si l'image n'est pas trouver pour afficher du texte
+              a la place. <br/><br/>
+              alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth" <br/><br/>
+              Comme dans cet exemple: <img src="dinosaur.jpg" alt="RAWRR">
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">&lt;a&gt</th>
+          <td>Permet de créer un lien, soit vers une page local ou externe.</td>
+          <td>
+              Voici un exemple d'hyperlien vers le site de Mozilla: 
+              <a href="https://www.mozilla.org/fr/">la page d'accueil Mozilla</a>.
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">&lt;br/&gt;</th>
+          <td>Permet de faire un retour à la ligne.</td>
+          <td>
+              Bonjour.<br/>
+              Ce texte est sur une nouvelle ligne.
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">&lt;strong&gt;</th>
+          <td>Indique une section de texte importante et la transforme en caractères gras.</td>
+          <td>Exemple: J'aime <strong>mon</strong> chien.</td>
+        </tr>
+        <tr>
+          <th scope="row">&lt;div&gt;</th>
+          <td>
+              Utiliser pour diviser les sections en html et est facilement
+              styliser avec le css. C'est également un element de block,
+              comparer à un élément de ligne.
+          </td>
+          <td><div class="border"> Ceci est un texte contenu dans une balise div </div></td>
+        </tr>
+        <tr>
+          <th scope="row">&lt;span&gt;</th>
+          <td>Utiliser pour marquer une partie de texte ou de document en html.</td>
+          <td>Ceci est un texte <span style = "color : blue">avec une partie dans le span</span>.</td>
+        </tr>
+        <tr>
+          <th scope="row">&lt;form&gt;</th>
+          <td>Utiliser pour marquer une partie de texte ou de document en html.</td>
+          <td>
+              Dans cette section nous verrons la balise form. Je vais construire
+              un dummy formulaire avec des exemple d'input. <br/>
+
+              Cette balise nous permet de créer un formulaire HTML avec des input
+              de l'utilisateur.ice. <br />
+              <!--
+                Source: https://www.w3schools.com/tags/tag_input.asp
+                Utilisation: Rapidement montrer tous les inputs
+              //-->
+              <form action="/action_page.php" method="get">
+                <label for = "button">Bouton: </label>
+                <input type="button" id="button">
+                <label for = "checkbox">Checkbox: </label>
+                <input type="checkbox" id="checkbox">
+                <label for = "color">Color: </label>
+                <input type="color" id="color">
+                <label for = "date">Date: </label>
+                <input type="date" id = "date">
+                <label for = "datetime">DateTime: </label>
+                <input type="datetime-local" id = "datetime">
+                <label for = "email">Email: </label>
+                <input type="email" id = "email">
+                <label for = "file">File: </label>
+                <input type="file" id = "file">
+                <label for = "hidden">Hidden: </label>
+                <input type="hidden" id = "hidden">
+                <label for = "image">Image: </label>
+                <input type="image" id = "image">
+                <label for = "month">Month: </label>
+                <input type="month" id= "month">
+                <label for = "number">Number: </label>
+                <input type="number" id = "number">
+                <label for = "password">Password: </label>
+                <input type="password" id = "password">
+                <label for = "radio">Radio: </label>
+                <input type="radio" id = "radio">
+                <label for = "range">Range: </label>
+                <input type="range" id = "range">
+                <label for = "reset">Reset: </label>
+                <input type="reset" id = "reset">
+                <label for = "search">Search: </label>
+                <input type="search" id="search">
+                <label for = "submit">Submit: </label>
+                <input type="submit" id = "submit">
+                <label for = "tel">Tel: </label>
+                <input type="tel" id = "tel">
+                <label for = "text">Text: </label>
+                <input type="text" id = "text"> <!-- (default value) -->
+                <label for = "time">Time: </label>
+                <input type="time" id = "time">
+                <label for = "url">URL: </label>
+                <input type="url" id = "url">
+                <label for = "week">Week: </label>
+                <input type="week" id = "week">
+              </form>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">&lt;select&gt;</th>
+          <td>Utiliser pour proposer une liste déroulante aux utilisateur.ices.</td>
+          <td>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <label class="input-group-text" for="inputGroupSelect01">Options</label>
+                </div>
+                <select class="custom-select" id="inputGroupSelect01">
+                  <option value="Concept de programmation II">
+                    Concept de programmation II
+                  </option>
+                  <option value="Base de donnees">
+                    Base de données
+                  </option>
+                  <option value="Front-end">
+                    Front-end
+                  </option>
+                </select>
+              </div>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">&lt;table&gt;</th>
+          <td>Utilisé pour créer un tableau</td>
+          <td>
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">&lt;#&gt;</th>
+                  <th scope="col">1</th>
+                  <th scope="col">2</th>
+                  <th scope="col">3</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td style="border: 2px solid powderblue">1-1</td>
+                  <td style="color: red">1-2</b> </td>
+                  <td style="font-size: 150px">1-3</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td style="font-family: Arial">2-1</td>
+                  <td style="padding-left: 20px">2-2</td>
+                  <td style="text-align: center">2-3</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td style="background-color: yellow">3-1</td>
+                  <td style="height: 15px">3-2</td>
+                  <td style="width: 40px">3-3</td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
