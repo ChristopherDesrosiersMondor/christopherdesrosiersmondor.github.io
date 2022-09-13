@@ -32,19 +32,23 @@ https://www.w3schools.com/css/css_align.asp
 
 h1 {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: large;
+    font-size: larger;
 }
 
 h2 {
     font-family: 'Times New Roman', Times, serif;
-    font-size: medium;
+    font-size: large;
 }
 
 p {
     font-family: 'Times New Roman', Times, serif;
-    font-size: small;
+    font-size: medium;
 }
 
-section {
-    border: 2px solid #3744b8;
+.corps {
+    padding-left: 20%;
+}
+
+.info_element {
+    padding-left: 10%;
 }
