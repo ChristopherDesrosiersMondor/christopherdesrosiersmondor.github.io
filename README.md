@@ -1,4 +1,4 @@
-# Laboratoire2 : Pizzeria Terminal :tram:
+# Portfolio Front-End :mortar_board:
 
 [comment]: # (Définir un nom de projet qui explique sommairement ce dernier.)
 
@@ -11,8 +11,8 @@
 ## Description
 
 [comment]: # (Il faut expliquer ce que le projet fait exactement. Il faut décrire le contexte du projet ainsi qu’offrir des ressources externes pour les termes pouvant être moins connus par les visiteurs. Si jamais ce projet est une solution alternative à un autre, il est important de le mentionner dans cette section.)
-Ce programme permet à un.e utilisateur.ice de gérer une simulation de pizzeria. On peut y voir différent type de pizzas et de boites en inventaire, en ajouter, comparer pour qui
-un 2 pour 1 est le plus avantageux et simuler une livraison en tentant de mettre une pizza dans une boite! Les sims vous livre une large, dans le terminal!
+Ce site web permettra de présenter les différents projets complétés dans le cadre de ma formaton en développement
+logiciel.
 
 
 [comment]: # (## Aide visuelle)
@@ -26,22 +26,9 @@ un 2 pour 1 est le plus avantageux et simuler une livraison en tentant de mettre
 
 
 ## Utilisation
-Lors du lancement du programme l'utilisateur.ice se fera présenter les choix suivants:  
-        1 : "Creer une nouvelle pizza",  
-        2 : "Creer une nouvelle boite",  
-        3 : "Voir la liste de pizzaz",  
-        4 : "Voir la liste de boites",  
-        5 : "Comparer special 2 pour 1",  
-        6 : "Mettre une pizza dans une boite"  
+Le site web est accessible au : https://christopherdesrosiersmondor.github.io/
 
-Lors du choix 1 il sera possible de créer une nouvelle pizza en informant de ses dimensions et de son coût. La pizza sera ajouter à une liste.  
-Lors du choix 2 il sera possible de créer une nouvelle boite en informant de ses dimensions. La boite sera ajouter à une liste.  
-Lors du choix 3, une liste des pizzas sera affichée dans le terminal.  
-Lors du choix 4, une liste des boites sera affichée dans le terminal.  
-Lors du choix 5, on informera la personne utilisant le programme à savoir si le spécial 2 pour 1 informé par ses choix de pizza et de prix sont plus avantageux
-pour cette personne ou pour la pizzeria.  
-Lors du choix 6, on simulera une livraison en faisant choisir une pizza et une boite à l'utilisateur.ice et en vérifiant que la pizza rentre bien dans la boite
-avant de retiré les deux éléments de leur liste respective.  
+Sur le site web il sera possible de visiter chaque section qui portera sur un projet en particulier.
 
 [comment]: # (## Support)
 
@@ -60,8 +47,8 @@ Je suis très ouvert aux contributions et commentaires.
 [comment]: # (Il est aussi utile de présenter les prérequis au développement du projet tel que des variables d’environnement à modifier ou l’exécution préalable de routines.)
 
 
-## Auteurs et reconnaissances
-La présentation du code et la lisibilité ont été amélioré par la corrections et les commentaires de Kpresseau dans le cadre du cours.
+[comment]: # (## Auteurs et reconnaissances)
+
 
 [comment]: # (Il est important de reconnaître les personnes ayant contribué au projet, ainsi que de remercier les personnes ayant offert du support.)
 
@@ -71,5 +58,4 @@ CC
 
 
 ## État du projet
-Le développement du projet est maintenant terminé.  
-Le projet est laissé ici pour futur références dans mon parcours d'apprentissage.
+Le projet est en cours de développement dans le cadre du cours 420-931-MA Développement Web (Front-End).
