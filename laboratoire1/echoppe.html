@@ -33,7 +33,7 @@
                 <img src="../images/ceinture.webp">
               </th>
               <td>
-                Une ceinture parfaite pour commencer une aventure!
+                <p id="description">Une ceinture parfaite pour commencer une aventure!</p>
               </td>
               <td>
                 <ul>
@@ -44,7 +44,7 @@
 
                   <li>
                     <label for = "number">Combien: </label>
-                    <input type="number" id = "number">
+                    <input type="number" id = "number" value="0">
                   </li>
                 </ul>
               </td>
@@ -58,7 +58,7 @@
                 <img src="../images/tunique.webp">
               </th>
               <td>
-                Avec un tel style, le premier NPC venu vous donnera une quête!
+                <p id="description">Avec un tel style, le premier NPC venu vous donnera une quête!</p>
               </td>
               <td>
                 <ul>
@@ -69,7 +69,7 @@
 
                   <li>
                     <label for = "number">Combien: </label>
-                    <input type="number" id = "number">
+                    <input type="number" id = "number" value="0">
                   </li>
                 </ul>
               </td>
@@ -83,18 +83,18 @@
                 <img src="../images/pantalons.webp">
               </th>
               <td>
-                N'oubliez pas votre paire de pantalon, même si la feste était dur hier!
+                <p id="description">N'oubliez pas votre paire de pantalon, même si la feste était dur hier!</p>
               </td>
               <td>
                 <ul>
                   <li>
                     <label for = "checkbox">Acheter: </label>
-                    <input type="checkbox" id = "checkbox">
+                    <input type="checkbox" id="checkbox">
                   </li>
 
                   <li>
                     <label for = "number">Combien: </label>
-                    <input type="number" id = "number">
+                    <input type="number" id = "number" value="0">
                   </li>
                 </ul>
               </td>
@@ -108,7 +108,7 @@
                 <img src="../images/bottes.webp">
               </th>
               <td>
-                Rien comme une bonne paire de botte pour aller quester en forêt pendant la fin de semaine :)
+                <p id="description">Rien comme une bonne paire de botte pour aller quester en forêt pendant la fin de semaine :)</p>
               </td>
               <td>
                 <ul>
@@ -119,7 +119,7 @@
 
                   <li>
                     <label for = "number">Combien: </label>
-                    <input type="number" id = "number">
+                    <input type="number" id = "number" value="0">
                   </li>
                 </ul>
               </td>
@@ -133,7 +133,7 @@
                 <img src="../images/porte_bouteille.webp">
               </th>
               <td>
-                Plus important que l'or: l'hydratation sur le champs de bataille !
+                <p id="description">Plus important que l'or: l'hydratation sur le champs de bataille !</p>
               </td>
               <td>
                 <ul>
@@ -144,7 +144,7 @@
 
                   <li>
                     <label for = "number">Combien: </label>
-                    <input type="number" id = "number">
+                    <input type="number" id = "number" value="0">
                   </li>
                 </ul>
               </td>
@@ -158,7 +158,7 @@
                 <img src="../images/armure.webp">
               </th>
               <td>
-                L'habit ne fait pas le moine, mais il peut faire le voleur!
+                <p id="description">L'habit ne fait pas le moine, mais il peut faire le voleur!</p>
               </td>
               <td>
                 <ul>
@@ -169,7 +169,7 @@
 
                   <li>
                     <label for = "number">Combien: </label>
-                    <input type="number" id = "number">
+                    <input type="number" id = "number" value="0">
                   </li>
                 </ul>
               </td>
@@ -179,6 +179,9 @@
             </tr>
           </tbody>
         </table>
+        <section class="actions_achat">
+          <button type="button" id="btn-achat" onclick="alert('Votre commande est en chemin!')">Acheter maintenant</button>
+        </section>
     </section>
   </body>
 </html>
