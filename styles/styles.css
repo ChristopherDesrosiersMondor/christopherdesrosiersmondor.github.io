@@ -55,11 +55,16 @@ p {
 }
 
 .corps {
+    font-size: x-large;
     padding-left: 20%;
     z-index: 1; 
     top: 2%; 
     overflow-x: hidden; 
     padding-top: 20px;
+}
+
+.corps p {
+    font-size: x-large;
 }
 
 .actions_achat {
@@ -98,8 +103,16 @@ form {
     border-radius: 25px;
 }
 
-ul {
+#btn-achat:hover {
+    opacity: 100%;
+}
+
+#ul-ogre {
     list-style-image: url('../images/needle.png');
+}
+
+#ul-gen {
+    list-style-image: url('../images/right-arrow.png');
 }
 
 #email {
@@ -115,4 +128,18 @@ ul {
 #btn-connexion {
     opacity: 70%;
     border-radius: 25px;
+}
+
+#btn-connexion:hover {
+    opacity: 100%;
+}
+
+a {
+    font-size: large;
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    background-color: beige;
 }
