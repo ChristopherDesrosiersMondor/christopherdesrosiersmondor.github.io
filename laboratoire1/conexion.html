@@ -32,7 +32,27 @@
             </li>
 
             <li class="nav_option">
-                <input type="button" id="btn-connexion" value="Connexion">
+                <button type="button" id="btn-connexion" onclick="alert('Vous êtes bien connecté.e!')">Connexion</button>
+            </li>
+        </ul>
+      </form>
+
+      <h1>Toujous pas de compte? C'est par ici!</h1>
+      
+      <form method="get">
+        <ul class="nav_btn">
+            <li class="nav_option">
+                <label for = "email">Email: </label>
+                <input type="email" id = "email">
+            </li>
+
+            <li class="nav_option">
+                <label for = "password">Password: </label>
+                <input type="password" id = "password">
+            </li>
+
+            <li class="nav_option">
+                <button type="button" id="btn-connexion" onclick="alert('Vous avez maintenant un compte!')">Enregistrement</button>
             </li>
         </ul>
       </form>
