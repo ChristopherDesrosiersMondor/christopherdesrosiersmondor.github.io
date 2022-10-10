@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <link rel="icon" href="../images/playing-cards.png" type="image/x-icon">
     <link rel="stylesheet" href="../styles/styles.css">
-    <title>L'antre de l'ogre de Kolcaria</title>
+    <title>Un jeu bien brasser</title>
   </head>
   <body>
     <nav class="menu">
@@ -15,6 +15,9 @@
     </nav>
 
     <section class="corps">
+      <div id="card-display">
+
+      </div>
       <button type = "button" id="deck-init">Initialiser les cartes</button> </br>
       <button type = "button" id="deck-brassage">Brasser les cartes</button> </br>
     </section>
@@ -82,7 +85,7 @@
         User: Varun Omprakash
         Utilisation: afficher les cartes en creant des img
         */
-        const corps = document.querySelector('.corps')
+        const corps = document.querySelector('#card-display')
         const new_img = document.createElement("img")
         const new_br = document.createElement("br")
         for (let i = 0; i < deck.cards.length; i++){
@@ -107,7 +110,7 @@
         User: Gabriel McAdams
         Utilisation: Vider le corps pour reafficher le deck
         */
-        const corps = document.querySelector('.corps')
+        const corps = document.querySelector('#card-display')
         deck.brassage()
         corps.innerHTML = ''
         show_deck(deck)
