@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" href="../images/playing-cards.png" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <title>L'antre de l'ogre de Kolcaria</title>
+  </head>
+  <body>
+    <nav class="menu">
+      <ul class="nav_btn">
+          <li class="nav_option"><a href="../index.html">Retour au Portfolio</a></li>
+          <li class="nav_option"><a href="index.html">Accueil</a></li>
+      </ul>
+    </nav>
+
+    <section class="corps">
+      <button type = "button" id="deck-init">Initialiser les cartes</button> </br>
+      <button type = "button" id="deck-brassage">Brasser les cartes</button> </br>
+    </section>
+
+    <script>
+      class Card {
+        constructor(number, symbol, src) {
+          this.number = number;
+          this.symbol = symbol;
+          this.src = src;
+        }    
+      }
+    
+      class CardDeck {
+        constructor(cards = []) {
+          this.cards = cards;
+          this.symbols = ["♦", "♣", "♥", "♠"];
+          this.numbers = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+          if (this.cards === []) {
+            for (const symbol in this.symbols) {
+              for (const number in this.numbers) {
+                const src = '_of_'
+                if (symbol === '♦'){
+                  src += 'diamonds.png'
+                } else if (number === '♣'){
+                  src += 'clubs.png'
+                } else if (number === '♥'){
+                  src += 'hearts.png'
+                } else if (number === '♠'){
+                  src += 'spades.png'
+                }
+
+
+                if (number === 'A'){
+                  src = 'ace' + src
+                } else if (number === 'J'){
+                  src = 'jack' + src
+                } else if (number === 'Q'){
+                  src = 'queen' + src
+                } else if (number === 'K'){
+                  src = 'king' + src
+                }
+                src = '../images/lab2_images/' + src
+                this.cards.push(new Card(number, symbol, src));
+              }
+            }
+          }
+        }
+    
+        brassage() {
+          const moitie_deck = this.cards.length / 2;
+          const temp_deck1 = new CardDeck(this.cards.slice(0, 26));
+          const temp_deck2 = new CardDeck(this.cards.slice(26));
+          this.cards = []
+          for (let i = 0; i < moitie_deck; i++){
+            this.cards.push(temp_deck1.cards[i]);
+            this.cards.push(temp_deck2.cards[i]);
+          }
+        }
+      }
+
+      function show_deck(deck) {
+        /*
+        Source: https://flexiple.com/javascript/javascript-appendchild/
+        User: Varun Omprakash
+        Utilisation: afficher les cartes en creant des img
+        */
+        const corps = document.querySelector('.corps')
+        const new_img = document.createElement("img")
+        const new_br = document.createElement("br")
+        for (let i = 0; i < deck.cards.length; i++){
+          if (i % deck.numbers.length === (deck.numbers.length - 1)){
+            new_img.src = deck.cards[i].src
+            corps.appendChild(new_img)
+            corps.appendChild(new_br)
+          } else {
+            new_img.src = deck.cards[i].src
+            corps.appendChild(new_img)
+          }
+        }
+      }
+      
+      const deck = new CardDeck();
+    
+      const btn_brassage = document.querySelector('#deck-brassage');
+      const btn_init = document.querySelector('#deck-init')
+      btn_brassage.addEventListener('click', () => {
+        /*
+        Source: https://stackoverflow.com/questions/3955229/remove-all-child-elements-of-a-dom-node-in-javascript
+        User: Gabriel McAdams
+        Utilisation: Vider le corps pour reafficher le deck
+        */
+        const corps = document.querySelector('.corps')
+        deck.brassage()
+        corps.innerHTML = ''
+        show_deck(deck)
+      });
+
+      btn_init.addEventListener('click', () => {
+        show_deck(deck)
+      });
+    </script>
+  </body>
+</html>
+
+
