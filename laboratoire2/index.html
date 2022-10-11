@@ -4,9 +4,10 @@
     <meta charset="utf-8">
     <link rel="icon" href="../images/playing-cards.png" type="image/x-icon">
     <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Un jeu bien brasser</title>
   </head>
-  <body>
+  <body id="playing-cards-body">
     <nav class="menu">
       <ul class="nav_btn">
           <li class="nav_option"><a href="../index.html">Retour au Portfolio</a></li>
@@ -16,10 +17,8 @@
 
     <section class="corps">
       <div id="card-display">
-
       </div>
-      <button type = "button" id="deck-init">Initialiser les cartes</button> </br>
-      <button type = "button" id="deck-brassage">Brasser les cartes</button> </br>
+      <button type = "button" id="deck-brassage" class="btn btn-secondary btn-lg">Brasser les cartes</button> </br>
     </section>
 
     <script>
@@ -36,32 +35,34 @@
           this.cards = cards;
           this.symbols = ["♦", "♣", "♥", "♠"];
           this.numbers = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
-          if (this.cards === []) {
-            for (const symbol in this.symbols) {
-              for (const number in this.numbers) {
-                const src = '_of_'
-                if (symbol === '♦'){
+          if (this.cards.length === 0) {
+            for (let i = 0; i < this.symbols.length; i++) {
+              for (let y = 0; y < this.numbers.length; y++) {
+                let src = '_of_'
+                if (this.symbols[i] === '♦'){
                   src += 'diamonds.png'
-                } else if (number === '♣'){
+                } else if (this.symbols[i] === '♣'){
                   src += 'clubs.png'
-                } else if (number === '♥'){
+                } else if (this.symbols[i] === '♥'){
                   src += 'hearts.png'
-                } else if (number === '♠'){
+                } else if (this.symbols[i] === '♠'){
                   src += 'spades.png'
                 }
 
 
-                if (number === 'A'){
+                if (this.numbers[y] === 'A'){
                   src = 'ace' + src
-                } else if (number === 'J'){
+                } else if (this.numbers[y] === 'J'){
                   src = 'jack' + src
-                } else if (number === 'Q'){
+                } else if (this.numbers[y] === 'Q'){
                   src = 'queen' + src
-                } else if (number === 'K'){
+                } else if (this.numbers[y] === 'K'){
                   src = 'king' + src
+                } else {
+                  src = this.numbers[y] + src
                 }
                 src = '../images/lab2_images/' + src
-                this.cards.push(new Card(number, symbol, src));
+                this.cards.push(new Card(this.numbers[y], this.symbols[i], src));
               }
             }
           }
@@ -85,25 +86,28 @@
         User: Varun Omprakash
         Utilisation: afficher les cartes en creant des img
         */
-        const corps = document.querySelector('#card-display')
-        const new_img = document.createElement("img")
-        const new_br = document.createElement("br")
+        let corps = document.querySelector('#card-display')
         for (let i = 0; i < deck.cards.length; i++){
           if (i % deck.numbers.length === (deck.numbers.length - 1)){
+            const new_img = document.createElement("img")
+            const new_br = document.createElement("br")
             new_img.src = deck.cards[i].src
-            corps.appendChild(new_img)
-            corps.appendChild(new_br)
+            new_img.id = "playing-cards"
+            corps.append(new_img)
+            corps.append(new_br)
           } else {
+            const new_img = document.createElement("img")
             new_img.src = deck.cards[i].src
-            corps.appendChild(new_img)
+            new_img.id = "playing-cards"
+            corps.append(new_img)
           }
         }
       }
       
       const deck = new CardDeck();
+      show_deck(deck)
     
       const btn_brassage = document.querySelector('#deck-brassage');
-      const btn_init = document.querySelector('#deck-init')
       btn_brassage.addEventListener('click', () => {
         /*
         Source: https://stackoverflow.com/questions/3955229/remove-all-child-elements-of-a-dom-node-in-javascript
@@ -113,10 +117,6 @@
         const corps = document.querySelector('#card-display')
         deck.brassage()
         corps.innerHTML = ''
-        show_deck(deck)
-      });
-
-      btn_init.addEventListener('click', () => {
         show_deck(deck)
       });
     </script>
