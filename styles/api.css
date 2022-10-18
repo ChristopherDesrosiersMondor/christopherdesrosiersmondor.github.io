@@ -1,0 +1,41 @@
+/*
+Source: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+Utilisation: Placer mes elements comme je veux
+*/
+
+/*
+Source: https://developer.mozilla.org/en-US/docs/Web/CSS/inherit
+Utilisation: utiliser les marges du parent
+*/
+
+#search-input {
+    width: 90%;
+    margin: auto;
+    margin-top: inherit;
+    margin-bottom: inherit;
+}
+
+#search-results {
+    width: 70%;
+    margin: auto;
+    margin-top: inherit;
+    margin-bottom: inherit;
+}
+
+#wiki-logo {
+    width: 300px;
+    height: 300px;
+    align-content: center;
+    margin: auto;
+    margin-top: inherit;
+    margin-bottom: inherit;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    flex-flow: column wrap;
+    align-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
