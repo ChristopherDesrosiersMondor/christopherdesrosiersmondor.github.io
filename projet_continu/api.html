@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/api.css">
     <title>Notes de cours</title>
+    <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
   </head>
   <body>
     <!-- 
@@ -27,15 +29,16 @@
     </nav>
 
     <div class="flex-container">
-        <img src="../images/wiki.png"/ alt="wiki logo" id="wiki-logo">
+        <img src="https://download.logo.wine/logo/MapQuest/MapQuest-Logo.wine.png" alt="wiki logo" id="wiki-logo">
 
-        <h1>Un exemple d'utilisation d'api avec wikipedia</h1>
+        <h1>Un exemple d'utilisation d'api avec MapQuest</h1>
 
-        <input type="text" id="search-input" placeholder="Ecrire un sujet que vous recherchez ici..."/>
-        <button type="button" id="btn-recherche">Rechercher</button>
-        <div id="search-results"></div>
+        <!--Rien affiche mais j'abandonne de faire fonctionner une API je comprends pas-->
+        <div id="search-results">
+          <div id="map" style="width: 100%; height: 530px;"></div>
+        </div>
     </div>
-
+    
     <script src="../scripts/api.js"></script>
   </body>
 </html>
